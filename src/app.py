@@ -1,18 +1,18 @@
 
 # By Exlonk Gil
+import os
 import pandas as pd
 import plotly.express as px
 import pandas as pd
 import plotly.express as px
-from dash import dash_table, html, dcc,  Input
+from dash import dash_table, html, dcc,  Input, Dash
 from dash import Output
 import plotly.express as px
 import dash_bootstrap_components as dbc
 from jupyter_dash import JupyterDash
 from importlib.machinery import SourceFileLoader
 ds = SourceFileLoader("add",os.path.join(os.path.dirname(__file__),'data_science.py')).load_module()  
-from dash_bootstrap_templates import load_figure_template 
-import os                       
+from dash_bootstrap_templates import load_figure_template                     
 from dash import DiskcacheManager
 import dash 
 
@@ -292,7 +292,7 @@ input_table = dash_table.DataTable(id='table-editing-simple',
 
 # <----------------------------- Dash Layout --------------------------------> #
 
-app = JupyterDash(__name__,external_stylesheets=[dbc.themes.COSMO],
+app = Dash(__name__,external_stylesheets=[dbc.themes.COSMO],
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, \
                              initial-scale=1.0'}]) # SOLAR, LUX
