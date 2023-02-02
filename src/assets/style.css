@@ -1,0 +1,11 @@
+p {
+    font-size: 1.1rem;
+    text-align: justify;
+    text-justify: inter-word;
+    
+}
+
+body {
+    background-color:#1B2B35;
+    color:#fff;
+}
