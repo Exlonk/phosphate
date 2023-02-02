@@ -292,7 +292,7 @@ input_table = dash_table.DataTable(id='table-editing-simple',
 
 # <----------------------------- Dash Layout --------------------------------> #
 
-app = Dash(__name__,external_stylesheets=[dbc.themes.COSMO],
+app = Dash(__name__,external_stylesheets=[dbc.themes.COSMO],title='Phosphate'
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, \
                              initial-scale=1.0'}]) # SOLAR, LUX
