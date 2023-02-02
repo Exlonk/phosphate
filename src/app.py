@@ -9,7 +9,8 @@ from dash import Output
 import plotly.express as px
 import dash_bootstrap_components as dbc
 from jupyter_dash import JupyterDash
-import data_science as ds
+from importlib.machinery import SourceFileLoader
+ds = SourceFileLoader("add",os.path.join(os.path.dirname(__file__),'data_science.py')).load_module()  
 from dash_bootstrap_templates import load_figure_template 
 import os                       
 from dash import DiskcacheManager
